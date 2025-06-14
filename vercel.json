@@ -11,13 +11,5 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ],
-  "ignore": [
-    "downloaded_threads/*",
-    "markdown_files/*",
-    "__pycache__/*",
-    "*.db-journal",
-    "*.log",
-    "*.tmp"
   ]
 }
