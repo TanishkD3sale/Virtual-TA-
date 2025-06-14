@@ -2,14 +2,24 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "main.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "app.py"
+      "src": "/api",
+      "methods": ["POST"],
+      "dest": "main.py"
+    },
+    {
+      "src": "/health",
+      "methods": ["GET"],
+      "dest": "main.py"
+    },
+    {
+      "src": "/.*",
+      "dest": "main.py"
     }
   ]
 }
