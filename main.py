@@ -775,10 +775,11 @@ async def health_check():
 
 # Application entry point
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
     uvicorn.run(
         "main:app",
-        host="127.0.0.1",
-        port=8000,
-        reload=True,
+        host="0.0.0.0",  # Changed from 127.0.0.1
+        port=port,       # Use Render's PORT environment variable
+        reload=False,    # Disable reload in production
         log_level="info"
     )
