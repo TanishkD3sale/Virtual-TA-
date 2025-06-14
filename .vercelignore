@@ -1,0 +1,6 @@
+downloaded_threads/
+markdown_files/
+__pycache__/
+*.db-journal
+*.log
+*.tmp
